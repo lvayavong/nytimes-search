@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> nytimes</title>
+  </head>
+  <body>
+<div id="info">
+
+</div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    url += '?' + $.param({
+      'api-key': "fc044f51dbf74281a8dad3e5b46f8d2b",
+      'q': "sandwich maker",
+      'begin_date': "19900101",
+      'end_date': "20171118",
+    });
+    $.ajax({
+      url: url,
+      method: 'GET',
+    }).done(function(result) {
+    $("#info").text()
+    }).fail(function(err) {
+      throw err;
+    });
+    console.log(url);
+    </script>
+  </body>
+</html>
