@@ -1,0 +1,16 @@
+#main-header {
+    border-radius: 25px;
+    background: navy;
+    padding: 20px; 
+    width: 100%;
+    height: 150px; 
+    text-align: center;
+    color: white;   
+};
+
+
+
+body {
+
+	background-color: blue;
+}
